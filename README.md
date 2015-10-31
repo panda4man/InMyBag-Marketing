@@ -9,7 +9,13 @@ Run this to install all npm modules.
 $ npm install
 ```
 
-Gulp will now be installed so run this which will install all bower components and begin all other gulp tasks.
+Run this to install bower components.
+
+```
+$ gulp bower
+```
+
+With all dependencies installed we can now start up the server and the watchers.
 
 ```
 $ gulp
