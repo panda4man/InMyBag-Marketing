@@ -9,6 +9,7 @@
     function Controller($scope, Config) {
     	var vm = this;
         $scope.siteName = Config.siteName;
+
     	init();
 
     	function init () {

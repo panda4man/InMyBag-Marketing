@@ -74,19 +74,25 @@ gulp.task('icons-bootstrap', function() {
 //Template Cache
 function prepareTemplates() {
 	console.log('Starting template cache.');
-    var cache = gulp
-        .src(config.html.src)
+    var cache = gulp.src(config.html.src)
+        .pipe(minifyHtml(config.html.minify))
+        .pipe(templateCache(
+            config.html.templateCache.file,
+            config.html.templateCache.options
+        ));
+    console.log('Finished template cache');
+    return cache;
+}
+
+gulp.task('templateCache', function () {
+    return gulp.src(config.html.src)
         .pipe(minifyHtml(config.html.minify))
         .pipe(templateCache(
             config.html.templateCache.file,
             config.html.templateCache.options
         ))
         .pipe(connect.reload());
-    console.log('Finished template cache');
-    return cache;
-}
-
-gulp.task('templateCache', prepareTemplates);
+});
 
 //Clean the dist directory
 gulp.task('clean:dist', function() {
