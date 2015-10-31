@@ -20,13 +20,13 @@ With all dependencies installed we can now start up the server and the watchers.
 ```
 $ gulp
 ```
- 
- ## Next Steps
 
- Running gulp will start a live reload sever at 
+## Next Steps
 
- ```
- http://localhost:8081
- ```
+Running gulp will start a live reload sever at 
 
- which will watch for changes in all CSS, HTML, and JS, automatically run all minifcation & concatenation and then reload the browser.
+```
+http://localhost:8081
+```
+
+which will watch for changes in all CSS, HTML, and JS, automatically run all minifcation & concatenation and then reload the browser.
