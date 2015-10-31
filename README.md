@@ -9,7 +9,7 @@ Run this to install all npm modules.
 $ npm install
 ```
 
-Gulp will now be installed so run, which will install all bower components and begin all other gulp tasks.
+Gulp will now be installed so run this which will install all bower components and begin all other gulp tasks.
 
 ```
 $ gulp
