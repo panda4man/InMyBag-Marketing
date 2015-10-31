@@ -1,0 +1,30 @@
+{
+  "name": "Angular Template",
+  "description": "This project is a boilerplate setup for any Anecka/CodingClinton Angular project.",
+  "main": "",
+  "authors": [
+    "Andrew Clinton <ddrew.clinton@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "angular",
+    "bower",
+    "bootstrap",
+    "sass",
+    "node"
+  ],
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "~3.3.5",
+    "font-awesome": "~4.4.0"
+  }
+}
