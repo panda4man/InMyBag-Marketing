@@ -191,4 +191,4 @@ gulp.task('watch', function() { 
     }, ['templateCache']);
 });
 
-gulp.task('default', ['server', 'bower', 'icons-fa', 'icons-bootstrap', 'css-dev', 'css-prod', 'js-dev', 'js-prod', 'watch']);
+gulp.task('default', ['angular', 'server', 'bower', 'icons-fa', 'icons-bootstrap', 'css-dev', 'css-prod', 'js-dev', 'js-prod', 'watch']);
