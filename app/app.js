@@ -358,7 +358,7 @@ J.$inject=["$state"],K.$inject=["$state"],b.module("ui.router.state").filter("is
         .module('app.constants', [])
         .constant('Config', (function Const() {
             var constant = {
-                siteName: 'InMyBag'
+                siteName: 'Test'
             };
             return constant;
         })());
