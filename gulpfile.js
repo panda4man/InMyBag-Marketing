@@ -141,7 +141,7 @@ gulp.task('angular', function() {
         .pipe(gulp.dest('./app/dist'));
 });
 
-gulp.task('js-dev', ['clean:dist', 'angular'], function() {
+gulp.task('js-dev', ['clean:dist'], function() {
     return gulp.src([config.js.jqueryPath + 'jquery.min.js', config.js.bootstrapPath + 'bootstrap.min.js', config.js.angular.dist, './src/**/*.js'])
         .pipe(plumber())
         .pipe(addStream.obj(prepareTemplates()))
@@ -150,7 +150,7 @@ gulp.task('js-dev', ['clean:dist', 'angular'], function() {
         .pipe(connect.reload());
 });
 
-gulp.task('js-prod', ['clean:dist', 'angular'], function() {
+gulp.task('js-prod', ['clean:dist'], function() {
     return gulp.src([config.js.jqueryPath + 'jquery.min.js', config.js.bootstrapPath + 'bootstrap.min.js', config.js.angular.dist, './src/**/*.js'])
         .pipe(plumber())
         .pipe(addStream.obj(prepareTemplates()))
