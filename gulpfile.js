@@ -141,7 +141,7 @@ gulp.task('angular', function() {
         .pipe(gulp.dest('./app/dist'));
 });
 
-gulp.task('js-dev', ['clean:dist'], function() {
+gulp.task('js-dev', function() {
     return gulp.src([config.js.jqueryPath + 'jquery.min.js', config.js.bootstrapPath + 'bootstrap.min.js', config.js.angular.dist, './src/**/*.js'])
         .pipe(plumber())
         .pipe(addStream.obj(prepareTemplates()))
@@ -150,7 +150,7 @@ gulp.task('js-dev', ['clean:dist'], function() {
         .pipe(connect.reload());
 });
 
-gulp.task('js-prod', ['clean:dist'], function() {
+gulp.task('js-prod', function() {
     return gulp.src([config.js.jqueryPath + 'jquery.min.js', config.js.bootstrapPath + 'bootstrap.min.js', config.js.angular.dist, './src/**/*.js'])
         .pipe(plumber())
         .pipe(addStream.obj(prepareTemplates()))
@@ -169,7 +169,7 @@ gulp.task('server', function() {
 });
 
 //Watch all sources to recompile
-gulp.task('watch', function() { 
+gulp.task('watch', ['server'], function() { 
     //Sass that we write in /styles dir
     gulp.watch(config.css.sassPath + '*.scss', {
         interval: 500
